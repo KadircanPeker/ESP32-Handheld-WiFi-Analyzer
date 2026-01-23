@@ -6,15 +6,15 @@
 
 A professional-grade, handheld network analysis tool developed using the **ESP32** microcontroller. This device helps engineers and technicians visualize the 2.4GHz Wi-Fi spectrum, analyze signal strength (RSSI), and detect security protocols in real-time.
 
-Unlike standard scanners, this project implements a custom **State Machine Architecture** for stability and features a **Optimized Deep Scan** algorithm to detect weak signals without freezing the UI.
+Unlike standard scanners, this project implements a custom **State Machine Architecture** for stability and features a **Deep Scan** algorithm to detect weak signals without compromising UI responsiveness.
 
 ## ✨ Key Features
 
-* **📊 Real-Time List Mode:** Displays SSID, RSSI (dBm), and Security status (Open/Secured) with a scrollable interface.
+* **📊 Real-Time List Mode:** Displays SSID, RSSI (dBm), and Security status (Open/Secured) with a scrollable interface. Handles hidden networks intelligently.
 * **📈 Spectrum Graph Mode:** Visualizes channel congestion (Ch 1-13) to identify interference and help optimize router placement.
 * **🔍 Detail View:** Provides deep insights for a specific network including MAC Address (BSSID), exact Channel, and Encryption Type (WEP/WPA2/WPA3).
 * **⚡ Smart UX:** Implements "Anti-Bounce" button logic and "Turbo Scroll" for smooth navigation on a small OLED screen.
-* **🛠️ Optimized Memory:** Efficient RAM management allows scanning and storing data without system crashes.
+* **💾 Efficient Resource Usage:** Optimized memory management using PROGMEM for graphical assets to ensure system stability.
 
 ## 🛠️ Hardware Required
 
@@ -37,17 +37,21 @@ Unlike standard scanners, this project implements a custom **State Machine Archi
 | **Button K3 (MODE)** | GPIO 5 | Switch to **Graph Mode** |
 | **Button K4 (SELECT)** | GPIO 4 | Select / **Detail View** / Rescan |
 
-*> Note: All buttons are configured with internal `INPUT_PULLUP` resistors. No external resistors needed.*
+*> Note: All buttons are configured with internal `INPUT_PULLUP` resistors. No external resistors are needed.*
 
 ## 📸 Gallery
 
-*(Please upload screenshots of your device here - See instructions below)*
+Here represents the device operating in different modes:
+
+| **List Mode** | **Graph Mode** | **Detail Mode** |
+| :---: | :---: | :---: |
+| <img src="https://github.com/KadircanPeker/ESP32-Handheld-WiFi-Analyzer/blob/main/mode_list.jpeg?raw=true" width="250"> | <img src="https://github.com/KadircanPeker/ESP32-Handheld-WiFi-Analyzer/blob/main/mode_graph.jpeg?raw=true" width="250"> | <img src="https://github.com/KadircanPeker/ESP32-Handheld-WiFi-Analyzer/blob/main/mode_detail.jpeg?raw=true" width="250"> |
 
 ## 🚀 Installation & Usage
 
 1.  **Clone the Repo:** Download this repository or copy the code.
-2.  **Libraries:** Install `Adafruit_GFX` and `Adafruit_SSD1306` via Arduino IDE Library Manager.
-3.  **Upload:** Select board "DOIT ESP32 DEVKIT V1" and upload.
+2.  **Libraries:** Install `Adafruit_GFX` and `Adafruit_SSD1306` via the Arduino IDE Library Manager.
+3.  **Upload:** Select your board (e.g., "DOIT ESP32 DEVKIT V1") and upload the `.ino` file.
 4.  **Controls:**
     * Use **K1/K2** to navigate the list.
     * Press **K4** to see details of the selected network.
@@ -55,7 +59,7 @@ Unlike standard scanners, this project implements a custom **State Machine Archi
 
 ## 👨‍💻 Author
 
-**[Kadircan Peker]**
+**Kadircan Peker**
 *Electrical & Electronics Engineering Student*
 *Focus: Embedded Systems & IoT*
 
