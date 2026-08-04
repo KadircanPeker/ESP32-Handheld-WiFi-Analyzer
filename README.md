@@ -4,6 +4,8 @@
 ![Platform](https://img.shields.io/badge/platform-ESP32-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+[Türkçe](README_TR.md)
+
 A professional-grade, handheld network analysis tool developed using the **ESP32** microcontroller. This device helps engineers and technicians visualize the 2.4GHz Wi-Fi spectrum, analyze signal strength (RSSI), and detect security protocols in real-time.
 
 Unlike standard scanners, this project implements a custom **State Machine Architecture** for stability and features a **Deep Scan** algorithm to detect weak signals without compromising UI responsiveness.
